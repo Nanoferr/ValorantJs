@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Map Game</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body id="bodycharacter">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand px-3 mx-2 font-monospace" href="#">Proyecto Valorant</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse container justify-content-left" id="navbarNav">
+            <!-- Links del Navbar-->
+            <ul class="navbar-nav">
+              <li class="nav-item px-3">
+                <a class="nav-link font-monospace" aria-current="page" href="index.html" >Inicio</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link active font-monospace" href="characters.html">Personajes</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link font-monospace" href="maps.html">Mapas</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link font-monospace" href="#">Team Flama</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div>
+        <h2 class="title">Personajes de Valorant</h2>
+      </div>
+      <div class="gallery-character">
+        <div class="div-split">
+                <button class="btn button sova character" id="btn-sova"><img src="resources/Sova.png" alt=""></button>
+        </div>
+        <div>
+            <button class="btn button omen character" id="btn-omen"><img src="resources/Omen.png" alt=""></button>
+        </div>
+        <div>
+            <button class="btn button raze character" id="btn-raze"><img src="resources/Raze.png" alt=""></button>
+        </div>
+        <div>
+            <button class="btn button reyna character" id="btn-reyna"><img src="resources/Reyna.png" alt=""></button>
+        </div>
+        <div>
+            <button class="btn button neon character" id="btn-neon"><img src="resources/Neon.png" alt=""></button>
+        </div>
+        <div>
+          <button class="btn button brimstone character" id="btn-brimstone"><img src="resources/Brimstone.png" alt=""></button>
+        </div>
+        <div>
+        <button class="btn button breach character" id="btn-breach"><img src="resources/Breach.png" alt=""></button>
+        </div>
+        <div>
+            <button class="btn button phoenix character" id="btn-phoenix"><img src="resources/Phoenix.png" alt=""></button>
+        </div>
+        <div>
+            <button class="btn button jett character" id="btn-jett"><img src="resources/Jett.png" alt=""></button>
+        </div>
+        <div>
+            <button class="btn button killjoy character" id="btn-killjoy"><img src="resources/KillJoy.png" alt=""></button>
+        </div>
+        <div>
+          <button class="btn button cypher character" id="btn-cypher"><img src="resources/cypher.png" alt=""></button>
+      </div>
+      </div>
+    <div class="descriptions" id="descriptions">
+      <div>
+        <img class="character-img" id="character-img" src="resources/Sova.png" alt="">
+      </div>
+      <div class="character-text">
+        <h3 class="character-name" id="character-name">
+        </h3>
+        <div id="close-pj"><button class="btn btn-sm" id="close-desc"><i class="fa fa-window-close fa-xs-2" aria-hidden="true"></i></button> </div>
+      
+        <div class="fixed">
+       <span id="history" style="color: gold">Historia:</span>
+        <p class="character-data" id="character-p"></p> 
+      </p>
+      </div>
+
+      <div class="fixed">
+      <span id="origen" style="color: gold">Origen:</span>
+      <p class="character-data" id="character-origen">
+        
+      </p>
+    </div>
+
+    <div class="fixed">
+      <span id="history" style="color: gold">Mejores Mapas:</span>
+      <p class="character-data" id="character-map">
+         
+      </p>
+    </div>
+
+    <div class="fixed">
+      <span style="color: gold">Rol:</span>
+      <p class="character-data" id="character-role"> 
+      </p>
+      </div>
+    </div>
+    </div>
+
+    <!--<div class="input-group rounded" id="buscador">
+      <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
+      <button class="btn"><span class="input-group-text border-0" id="search-addon">
+        <i class="fas fa-search"></i>
+      </span>
+    </button>
+    </div>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="character.js"></script>
+</body>
+</html>

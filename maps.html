@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Map Game</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body id="bodymap">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand px-3 mx-2 font-monospace" href="#">Proyecto Valorant</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse container justify-content-left" id="navbarNav">
+            <!-- Links del Navbar-->
+            <ul class="navbar-nav">
+              <li class="nav-item px-3">
+                <a class="nav-link font-monospace" aria-current="page" href="index.html" >Inicio</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link font-monospace" href="characters.html">Personajes</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link active font-monospace" href="maps.html">Mapas</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link font-monospace" href="#">Team Flama</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div>
+        <h2 class="title">Mapas de Valorant</h2>
+      </div>
+      <!-- Galeria de mapas que usaremos para la funcionalidad-->
+
+      <div class="full-img-split full" id="full-img-split">
+        <img src="resources/Split.jpg" alt="">
+        <h3 class="p-name">Split</h3>
+        <p class="p-map">Split es un mapa interesante para jugar, ya que no parece que haya sido diseñado para los simples objetivos de Valorant, con mucho espacio abierto y cuerdas para trepar.</p>
+        <div class="btnclose">
+            <button class="btn bg-white" id="btn-closesplit">X</button>
+        </div>
+       </div>
+
+       <div class="full-img-icebox full" id="full-img-icebox">
+        <img src="resources/Icebox.jpg" alt="">
+        <h3 class="p-name">Icebox</h3>
+        <p class="p-map">Es el único mapa del juego que tiene el Sitio de Spike A en un lugar cerrado, y cuenta con una buena mezcla de zonas interiores y exteriores.</p>
+        <div class="btnclose">
+            <button class="btn bg-white" id="btn-closeicebox">X</button>
+        </div>
+       </div>
+
+       <div class="full-img-ascent right" id="full-img-ascent">
+        <img src="resources/Ascent.jpg" alt="">
+        <h3 class="p-name">Ascent</h3>
+        <p class="p-map">Controlar Mid es una parte crucial de Ascent, y gran parte del éxito depende de ello. Aunque la sección media es muy abierta, hay muchos cuellos de botella y esquinas cerradas en el mapa.</p>
+        <div class="btnclose">
+            <button class="btn bg-white" id="btn-closeascent">X</button>
+        </div>
+       </div>
+
+       <div class="full-img-bind full" id="full-img-bind">
+        <img src="resources/Bind.jpg" alt="">
+        <h3 class="p-name">Bind</h3>
+        <p class="p-map">Bind es posiblemente el mapa más abierto de Valorant, por lo que tendrás que ser muy consciente de cómo gestionar los espacios si quieres tener éxito.</p>
+        <div class="btnclose">
+            <button class="btn bg-white" id="btn-closebind">X</button>
+        </div>
+       </div>
+
+       <div class="full-img-breeze right" id="full-img-breeze">
+        <img src="resources/Breeze.jpg" alt="">
+        <h3 class="p-name">Breeze</h3>
+        <p class="p-map">Breeze es uno de los mapas más abiertos de Valorant con pasillos anchos y muchas áreas perfectas para disparar con el Operator o Chamber ultimate. Para este mapa, el control sobre el medio del mapa será la clave del éxito, ya que permite a los atacantes navegar fácilmente hacia cualquier lado.</p>
+        <div class="btnclose">
+            <button class="btn bg-white" id="btn-closebreeze">X</button>
+        </div>
+       </div>
+
+
+
+
+      <div class="gallery">
+        <div>
+                <button class="btn button" id="btn-split"><img src="resources/Split.jpg" alt=""></button>
+        </div>
+        <div>
+            <button class="btn button" id="btn-icebox"><img src="resources/Icebox.jpg" alt=""></button>
+        </div>
+        <div>
+            <button class="btn button" id="btn-ascent"><img src="resources/Ascent.jpg" alt=""></button>
+        </div>
+        <div>
+            <button class="btn button" id="btn-bind"><img src="resources/Bind.jpg" alt=""></button>
+        </div>
+        <div>
+            <button class="btn button" id="btn-breeze"><img src="resources/Breeze.jpg" alt=""></button>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="maps.js"></script>
+    <script src="character.js"></script>
+</body>
+</html>
