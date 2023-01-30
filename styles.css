@@ -1,3 +1,63 @@
+article {
+    color:white;
+    background-image: url(resources/fondo.jpg);
+    width: 50%;
+    height: 50%;
+    margin-top: 100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: monospace;
+}
+
+.general-questions h2 {
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-size: 250%;
+    margin-top: 30px;
+}
+
+.question-title button {
+   
+    margin-left: 50px;
+}
+
+.question-title p {
+   
+    margin-left: 20px;
+}
+
+.question-title {
+    display: flex;
+    
+}
+
+/* hide text */
+.question-text {
+    display: none;
+}
+
+.show-text .question-text {
+    display: block;
+}
+
+.minus-icon {
+    display: none;
+}
+.show-text .minus-icon {
+    display: inline;
+}
+.show-text .plus-icon{
+    display: none;
+}
+
+
+
+
+
+
+
+
 body {
     background-image: url(resources/valorantimg.jpg);
     background-size: cover;

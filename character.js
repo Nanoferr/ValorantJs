@@ -1,4 +1,3 @@
-//----------------Declaraciones de variables para personajes----------------
 
 const btnCharacters = document.querySelectorAll(".character");
 const descriptions = document.getElementById("descriptions");
