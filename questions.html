@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Map Game</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body id="bodycharacter">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand px-3 mx-2 font-monospace" href="#">Proyecto Valorant</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse container justify-content-left" id="navbarNav">
+            <!-- Links del Navbar-->
+            <ul class="navbar-nav">
+              <li class="nav-item px-3">
+                <a class="nav-link font-monospace" aria-current="page" href="index.html" >Inicio</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link font-monospace" href="characters.html">Personajes</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link font-monospace" href="maps.html">Mapas</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link active font-monospace" href="questions.html">Preguntas y Respuestas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div>
+        <h2 class="title">Preguntas de Valorant</h2>
+      </div>
+      <section class="question-section">
+        <div class="questions-center">
+          <!-- single question-->
+          <article class="question">
+              <!-- question title-->
+              <div class="question-title">
+                <p>Si estas en una isla junto al Counter Strike y el Valorant y solo puedes escapar con uno, a quien salvas?</p>
+                <button type="button" class="question-btn btn bg-danger">
+                  <span class="plus-icon">
+                    <i class="far fa-plus-square"></i>
+                  </span>
+                  <span class="minus-icon">
+                    <i class="far fa-minus-square"></i>
+                  </span>
+                </button>
+              </div>
+               <!-- question text-->
+               <div class="question-text">
+                <p class="answer">
+                  Dificil decision, pero salvaria al Counter Strike<img src="resources/cry.png" id="cry">
+                </p>
+               </div>
+          </article>
+           <!-- end single question-->
+           <!-- single question-->
+          <article class="question">
+            <!-- question title-->
+            <div class="question-title">
+              <p >Cual es el mejor jugador profesional de Valorant actualmente?</p>
+              <button type="button" class="question-btn btn bg-danger">
+                <span class="plus-icon">
+                  <i class="far fa-plus-square"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="far fa-minus-square"></i>
+                </span>
+              </button>
+            </div>
+             <!-- question text-->
+             <div class="question-text">
+              <p class="answer">
+               La contestare a riesgo de ofenderme ya que es evidente que el jugador Nanoniuss de Argentina es por lejos el mejor jugador de la actualidad, su unica y exquisita partida con Astra fue un regalo hacia toda la comunidad de Valorant, Nanoniuss no juega valorant, lo siente. <img src="resources/Astra.jpg" id="nano"> 
+              </p>
+             </div>
+        </article>
+         <!-- end single question-->
+         <!-- single question-->
+         <article class="question">
+          <!-- question title-->
+          <div class="question-title">
+            <p>Cual es el mapa considerado el mas dificil de jugar?</p>
+            <button type="button" class="question-btn btn bg-danger">
+              <span class="plus-icon">
+                <i class="far fa-plus-square"></i>
+              </span>
+              <span class="minus-icon">
+                <i class="far fa-minus-square"></i>
+              </span>
+            </button>
+          </div>
+           <!-- question text-->
+           <div class="question-text">
+            <p class="answer">
+              Con los cambios recientes Split es considerado el mapa mas dificil de jugar, ya sea de ataque como en defensa, este mapa se convierte en una partida de ajedrez<img src="/resources/Split.jpg" id="splt">
+            </p>
+           </div>
+      </article>
+       <!-- end single question-->
+        </div>
+      </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="character.js"></script>
+    <script src="maps.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
