@@ -121,7 +121,7 @@ const killjoy = {
     role: "Sentinela",
     origen: "Alemania",
     maps: "Ascent, Icebox, Heaven",
-    img: "resources/Killjoy.png",
+    img: "resources/KillJoy.png",
 };
 
 const kayo = {
