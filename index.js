@@ -19,26 +19,6 @@ questions.forEach(function(question){
 )
 
 
-window.addEventListener("DOMContentLoaded", function(){
-    let displayMenu = characters.map(function(item) {
-      
-    })
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*  
 const btns = document.querySelectorAll(".question-btn");

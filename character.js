@@ -1,8 +1,5 @@
-
 /* defino variables para la data de lso personajes y los botones de los personajes */
-
-
-const btnCharacters = document.querySelectorAll(".character");
+//esto se podria hacer variable y ahorraria lineas de codigo
 const descriptions = document.getElementById("descriptions");
 const characterImg = document.getElementById("character-img");
 const characterP = document.getElementById("character-p");
@@ -12,15 +9,11 @@ const characterRole = document.getElementById("character-role");
 const characterName = document.getElementById("character-name");
 const closeDesc = document.getElementById("close-desc");
 
-
-
 /* defino variables para los botones para la busqueda */
 
-const btnSearch = document.querySelectorAll(".btn-lf");
-
-
-
-
+const sectionCenter = document.querySelector(".section-center");
+const container = document.querySelector(".btn-searcher");
+//defino los objetos/pjs que integraran el array principal de characters
 const cypher = {
     id: 10,
     name: "cypher",
@@ -131,7 +124,55 @@ const killjoy = {
     img: "resources/Killjoy.png",
 };
 
+const kayo = {
+    id: 10,
+    name: "kayo",
+    History: "KAY/O es una máquina de guerra creada con un solo propósito: neutralizar radiantes. Su poder para suprimir las habilidades enemigas neutraliza la capacidad de sus rivales para contraatacar, un aspecto que le da a él y a sus aliados la ventaja definitiva en la batalla.",
+    role: "Iniciador",
+    origen: "Desconocido",
+    maps: "Ascent, Icebox, Heaven",
+    img: "resources/Kayo.png",
+};
 
+const sage = {
+    id: 11,
+    name: "sage",
+    History: "Sage destaca a la hora de crear espacios para su equipo allá donde va. Sus capacidades especiales para revivir a compañeros caídos en batalla y para mantener a raya los asaltos enemigos la convierten en la calma en mitad de la tormenta para su equipo.",
+    role: "Controlador",
+    origen: "China",
+    maps: "Breeze, Split, Fracture",
+    img: "resources/Sage.png",
+};
+
+const yoru = {
+    id: 12,
+    name: "yoru",
+    History: "El nativo de Japón, Yoru, fractura la realidad para infiltrarse en las líneas enemigas sin ser visto. Con engaños y agresividad por igual, sorprende a sus objetivos antes de que sepan dónde buscarlo.",
+    role: "Duelista",
+    origen: "Japon",
+    maps: "Bind, Heaven, Lotus",
+    img: "resources/Yoru.png",
+};
+
+const viper = {
+    id: 13,
+    name: "viper",
+    History: "Química estadounidense, Viper despliega varios artefactos químicos venenosos para controlar el campo de batalla y afectar la visión de los enemigos. Si las toxinas no asesinan a su presa, sin duda lo harán sus juegos mentales.",
+    role: "Controlador",
+    origen: "Desconocido",
+    maps: "Bind, Icebox, Lotus",
+    img: "resources/Viper.png",
+};
+
+const chamber = {
+    id: 14,
+    name: "chamber",
+    History: "Bien vestido y bien armado, el diseñador de armas francés Chamber repele agresores con una precisión mortal. Aprovecha su arsenal personalizado para mantener a los enemigos a raya y eliminarlos desde lejos. Siempre cuenta con la contingencia perfecta para cada plan.",
+    role: "Sentinela",
+    origen: "Francia",
+    maps: "Fracture, Icebox, Split",
+    img: "resources/chamber.png",
+};
 /* El objeto lo cree con variables, de esta manera la funcion es mas facil ya que puedo entrar al objeto con el indice y comparar el classList del e(event) en la funcion*/
 
 const characters = [
@@ -145,11 +186,16 @@ const characters = [
     breach ,
     neon ,
     killjoy ,
-    cypher
+    cypher,
+    kayo,
+    sage,
+    yoru,
+    viper,
+    chamber
     ];
 
     
-    /* Funcion para mostrar la data segun el personaje de valorant que clickee */
+    /* Funcion para mostrar la data segun el personaje de valorant que clickee 
     
      btnCharacters.forEach(function(btn){
         btn.addEventListener("click", function(e) {
@@ -179,6 +225,83 @@ const characters = [
         descriptions.classList.toggle("hidedesc");
     })
 
+    */
 
-/*  Funcion para mostrar los personajes segun el buscador que use con los botones*/
+    // cargamos los items llamando a funciones que ya estan armadas con las variables dinamicas y innerHTML
+    window.addEventListener("DOMContentLoaded", function(){
+       displayPjItems(characters);
+       displayPjButtons();
+    });
 
+    function displayPjItems(pjItems) {
+        let displayPjs = pjItems.map(function(item) {
+            return `<div class="div-character">
+            <button class="btn button ${item.name} character" id="btn-${item.name}"><img src=${item.img} alt=""></button>
+    </div>`
+        })
+        displayPjs = displayPjs.join("");
+        sectionCenter.innerHTML = displayPjs;
+        
+        const btnCharacters = document.querySelectorAll(".character");
+        btnCharacters.forEach(function(btn){
+            btn.addEventListener("click", function(e) {
+               const dataPj = e.currentTarget.classList[2];
+             characters.findIndex(element => {
+    
+              if ((element.name === dataPj) === true)  {
+                characterImg.src = element.img;
+                characterP.textContent = element.History;
+                characterName.textContent = element.name;
+                characterOrigen.textContent = element.origen;
+                characterMap.textContent = element.maps;
+                characterRole.textContent = element.role;
+              };
+               })
+               
+               if (descriptions.classList.contains("hidedesc")) {
+                descriptions.classList.remove("hidedesc");
+               }
+               descriptions.classList.toggle("showdesc");
+            })
+        }) 
+    }
+ //usa el metodo reduce para achicar el array y dejar solo las clases unicas y no las repite (si se usa map se repetiria y no serviria en este caso)
+
+    function displayPjButtons() {
+        const roles = characters.reduce(function(values, item){ 
+            if (!values.includes(item.role)) {
+                values.push(item.role);
+            }
+            return values;
+           }, 
+           ["All"]
+           ); 
+            const rolesBtns = roles.map(function(role){
+                return `<button class="btn btn-primary btn-lf m-1" id="${role}" data-role="${role}"> ${role} </button>`
+            }).join(""); //el join lo junta todo
+            container.innerHTML = rolesBtns;
+            const btnSearch = document.querySelectorAll(".btn-lf");
+            //filtro los botones segun las clases sacadas con dataset, itera en cada uno
+            btnSearch.forEach(function(btn){
+                btn.addEventListener("click", function(e){
+                    const clase = e.currentTarget.dataset.role;
+                    console.log(clase);
+                    const filterRole = characters.filter(function(pj){
+                   if (pj.role == clase) {
+                    return pj;
+                   }
+                });  
+                    if (clase === "All") {
+                        displayPjItems(characters);
+                    } 
+                    else {
+                        displayPjItems(filterRole);   
+                    }
+                });
+            });
+    }
+
+        closeDesc.addEventListener("click", function() {
+        descriptions.classList.toggle("showdesc");
+        descriptions.classList.toggle("hidedesc");
+    })

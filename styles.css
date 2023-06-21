@@ -13,8 +13,10 @@ article {
 .general-questions h2 {
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
-    font-size: 250%;
+    font-size: 50px;
     margin-top: 30px;
+    font-weight: 600;
+    text-shadow: 1px 2px 2px black;
 }
 
 .question-title button {
@@ -22,9 +24,16 @@ article {
     margin-left: 50px;
 }
 
-.question-title p {
+.question-text p {
    
     margin-left: 20px;
+    font-size: 20px;
+}
+
+.question-title p {
+    color: gold;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px black;
 }
 
 .question-title {
@@ -69,8 +78,6 @@ article {
 }
 
 
-
-
 body {
     background-image: url(resources/valorantimg.jpg);
     background-size: cover;
@@ -92,7 +99,7 @@ h2 {
     padding-top: 50px;
     padding-bottom: 20px;
     letter-spacing: 1mm;
-    font-size:medium;
+    font-size: 30px;
 }
 
 .gallery img {
@@ -237,8 +244,8 @@ to {
 
 
 .gallery-character {
-    display: flex;
-    flex-direction: row;
+    display:flex;
+    flex-direction:row;
     flex-wrap: wrap;
     margin: 0% auto;
     justify-content: center;
@@ -249,7 +256,7 @@ to {
 
 .gallery-character img {
     width: 100%;
-    height: 150px;
+    height: 130px;
     padding: 3px;
     object-fit: cover;
 }
@@ -264,12 +271,12 @@ input.form-control {
 }
 
 .character-img {
-    width: 250px;
+    width: 200px;
     background-color: none;
 }
 
 .descriptions {
-    position: relative;
+    position:relative;
     width: auto;
     height: auto;
     color: white;
@@ -279,7 +286,7 @@ input.form-control {
     display: flex;
     justify-content:center;
     z-index: 1;
-    transform: translatey(-800%);
+    transform: translatey(-700%);
 }
 
 .showdesc {
@@ -291,7 +298,7 @@ input.form-control {
 
 @keyframes showDesc {
     from {
-        transform: translatey(-800%);
+        transform: translatey(-700%);
     }
     to {
         transform: translate(0);
@@ -309,7 +316,7 @@ input.form-control {
          transform: translate(0);
    }
    to {
-       transform: translatey(-800%);
+       transform: translatey(-700%);
    }
     }
 
@@ -368,7 +375,7 @@ padding: 10px;
     margin-left: 40%;
     margin-right: 40%;
     position:absolute;
-    margin-top: 50px;
+    margin-top: -20px;
 }
 
 .btn-searcher button {
