@@ -1,4 +1,7 @@
 
+/* defino variables para la data de lso personajes y los botones de los personajes */
+
+
 const btnCharacters = document.querySelectorAll(".character");
 const descriptions = document.getElementById("descriptions");
 const characterImg = document.getElementById("character-img");
@@ -8,6 +11,15 @@ const characterMap = document.getElementById("character-map");
 const characterRole = document.getElementById("character-role");
 const characterName = document.getElementById("character-name");
 const closeDesc = document.getElementById("close-desc");
+
+
+
+/* defino variables para los botones para la busqueda */
+
+const btnSearch = document.querySelectorAll(".btn-lf");
+
+
+
 
 const cypher = {
     id: 10,
@@ -120,6 +132,7 @@ const killjoy = {
 };
 
 
+/* El objeto lo cree con variables, de esta manera la funcion es mas facil ya que puedo entrar al objeto con el indice y comparar el classList del e(event) en la funcion*/
 
 const characters = [
     phoenix , 
@@ -136,7 +149,7 @@ const characters = [
     ];
 
     
-
+    /* Funcion para mostrar la data segun el personaje de valorant que clickee */
     
      btnCharacters.forEach(function(btn){
         btn.addEventListener("click", function(e) {
@@ -167,4 +180,5 @@ const characters = [
     })
 
 
-       
+/*  Funcion para mostrar los personajes segun el buscador que use con los botones*/
+
